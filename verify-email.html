@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Verify Email</title>
+
+<link
+rel="stylesheet"
+href="verify-email.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="logo">
+
+<img
+src="images/logo.png"
+alt="Logo">
+
+</div>
+
+<h2>Email Verification</h2>
+
+<p class="subtitle">
+
+We've sent a 6-digit verification code to your email address.
+
+</p>
+
+<div
+class="emailBox">
+
+<span id="userEmail">
+
+Loading...
+
+</span>
+
+</div>
+
+<div
+id="message"
+class="message"
+style="display:none;">
+
+</div>
+
+<div
+id="loading"
+class="loading"
+style="display:none;">
+
+Please wait...
+
+</div>
+
+<form
+id="verifyForm">
+
+<div class="otpWrapper">
+
+<input
+
+type="text"
+
+maxlength="1"
+
+class="otp"
+
+id="otp1"
+
+inputmode="numeric">
+
+<input
+
+type="text"
+
+maxlength="1"
+
+class="otp"
+
+id="otp2"
+
+inputmode="numeric">
+
+<input
+
+type="text"
+
+maxlength="1"
+
+class="otp"
+
+id="otp3"
+
+inputmode="numeric">
+
+<input
+
+type="text"
+
+maxlength="1"
+
+class="otp"
+
+id="otp4"
+
+inputmode="numeric">
+
+<input
+
+type="text"
+
+maxlength="1"
+
+class="otp"
+
+id="otp5"
+
+inputmode="numeric">
+
+<input
+
+type="text"
+
+maxlength="1"
+
+class="otp"
+
+id="otp6"
+
+inputmode="numeric">
+
+</div>
+
+<button
+
+type="button"
+
+id="verifyBtn">
+
+Verify Email
+
+</button>
+        <div class="resendArea">
+
+            <p>
+
+                Didn't receive the code?
+
+            </p>
+
+            <button
+
+                type="button"
+
+                id="resendBtn"
+
+                class="resendBtn">
+
+                Resend OTP
+
+            </button>
+
+            <p
+
+                id="countdown"
+
+                class="countdown">
+
+                You can resend again in
+                <span id="timer">60</span>s
+
+            </p>
+
+        </div>
+
+        <div class="bottomArea">
+
+            <a
+
+                href="wallet-register.html"
+
+                class="backLink">
+
+                ← Back to Registration
+
+            </a>
+
+        </div>
+
+    </form>
+
+</div>
+
+</div>
+
+<script src="verify-email.js"></script>
+
+</body>
+
+</html>

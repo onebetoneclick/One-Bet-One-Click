@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Activate Wallet</title>
+
+<link
+rel="stylesheet"
+href="activate-wallet.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="logo">
+
+<img
+src="images/logo.png"
+alt="Logo">
+
+</div>
+
+<h2>
+
+Activate Wallet
+
+</h2>
+
+<p class="subtitle">
+
+Please review your information before activating your wallet.
+
+</p>
+
+<div
+id="message"
+class="message"
+style="display:none;">
+
+</div>
+
+<div
+id="loading"
+class="loading"
+style="display:none;">
+
+Please wait...
+
+</div>
+
+<div class="summaryCard">
+
+<h3>
+
+Account Information
+
+</h3>
+
+<div class="row">
+
+<span>Full Name</span>
+
+<strong
+id="summaryName">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="row">
+
+<span>Email</span>
+
+<strong
+id="summaryEmail">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="row">
+
+<span>Phone</span>
+
+<strong
+id="summaryPhone">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="row">
+
+<span>Bank</span>
+
+<strong
+id="summaryBank">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="row">
+
+<span>Account Number</span>
+
+<strong
+id="summaryAccount">
+
+Loading...
+
+</strong>
+
+</div>
+        <div class="group">
+
+            <label>
+
+                Bank Verification Number (BVN)
+
+            </label>
+
+            <input
+
+                type="text"
+
+                id="bvn"
+
+                maxlength="11"
+
+                placeholder="Enter your 11-digit BVN"
+
+                inputmode="numeric"
+
+                autocomplete="off"
+
+                required>
+
+        </div>
+
+        <div class="notice">
+
+            <h4>
+
+                Important Notice
+
+            </h4>
+
+            <p>
+
+                • Your BVN is encrypted and securely processed.
+
+            </p>
+
+            <p>
+
+                • Your BVN is used only to verify your identity with Paystack.
+
+            </p>
+
+            <p>
+
+                • Your wallet will be activated immediately after successful verification.
+
+            </p>
+
+        </div>
+
+        <button
+
+            type="button"
+
+            id="activateBtn">
+
+            Activate Wallet
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="activate-wallet.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Register Wallet</title>
+
+<link
+rel="stylesheet"
+href="wallet-register.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="register-card">
+
+<div class="header">
+
+<h1>Open Wallet</h1>
+
+<p>
+
+Register your account to activate your
+One Bet One Click Wallet
+
+</p>
+
+</div>
+
+<div
+id="message"
+class="message"
+style="display:none;">
+
+</div>
+
+<div
+id="loading"
+class="loading"
+style="display:none;">
+
+<div class="spinner"></div>
+
+<span>
+
+Please wait...
+
+</span>
+
+</div>
+
+<form
+id="registerForm">
+
+<div class="form-group">
+
+<label>
+
+Email Address
+
+</label>
+
+<input
+
+type="email"
+
+id="email"
+
+placeholder="Enter Email Address"
+
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Phone Number
+
+</label>
+
+<input
+
+type="text"
+
+id="phone"
+
+placeholder="Enter Phone Number"
+
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Select Bank
+
+</label>
+
+<select
+
+id="bank"
+
+required>
+
+<option value="">
+
+Loading Banks...
+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Account Number
+
+</label>
+
+<input
+
+type="text"
+
+id="accountNumber"
+
+maxlength="10"
+
+placeholder="Enter Account Number"
+
+required>
+
+</div>
+
+<button
+
+type="button"
+
+id="verifyBtn"
+
+class="primary-btn">
+
+Verify Account
+
+</button>
+
+<div
+
+id="verifiedCard"
+
+class="verified-card"
+
+style="display:none;">
+
+<h3>
+
+Verified Account
+
+</h3>
+
+<p>
+
+Account Holder
+
+</p>
+
+<h2
+
+id="accountName">
+
+</h2>
+
+<input
+
+type="hidden"
+
+id="fullName">
+
+</div>
+<!-- Registration Summary -->
+
+<div
+id="summaryCard"
+class="summary-card"
+style="display:none;">
+
+<h3>
+Registration Details
+</h3>
+
+<div class="summary-row">
+
+<span>Full Name</span>
+
+<strong id="summaryName"></strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>Email</span>
+
+<strong id="summaryEmail"></strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>Phone</span>
+
+<strong id="summaryPhone"></strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>Bank</span>
+
+<strong id="summaryBank"></strong>
+
+</div>
+
+<div class="summary-row">
+
+<span>Account Number</span>
+
+<strong id="summaryAccount"></strong>
+
+</div>
+
+<p class="note">
+
+Please confirm that the information above is
+correct before registering.
+
+</p>
+
+<button
+
+type="button"
+
+id="registerBtn"
+
+class="success-btn"
+
+style="display:none;">
+
+Register
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script src="wallet-register.js"></script>
+
+</body>
+
+</html>

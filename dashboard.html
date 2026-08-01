@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | One Bet One Click Wallet</title>
+
+<link rel="stylesheet"
+href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+LOADING
+=========================== -->
+
+<div id="loading" class="loading">
+
+<div class="loader"></div>
+
+<p>Loading Wallet...</p>
+
+</div>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header class="topHeader">
+
+<div class="headerLeft">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div class="welcome">
+
+<p class="smallText">
+Welcome Back
+</p>
+
+<h2 id="userName">
+Loading...
+</h2>
+
+</div>
+
+</div>
+
+<div class="headerRight">
+
+<button id="notificationBtn"
+class="iconButton">
+
+<i class="fa-regular fa-bell"></i>
+
+<span class="badge">0</span>
+
+</button>
+
+</div>
+
+</header>
+
+<!-- ===========================
+MAIN
+=========================== -->
+
+<main class="dashboardContainer">
+
+<!-- ===========================
+BALANCE CARD
+=========================== -->
+
+<section class="balanceCard">
+
+<div class="balanceTop">
+
+<p>Available Balance</p>
+
+<button
+id="toggleBalance"
+class="eyeButton">
+
+<i class="fas fa-eye"></i>
+
+</button>
+
+</div>
+
+<h1 id="walletBalance">
+
+₦0.00
+
+</h1>
+
+<div class="walletRow">
+
+<span>
+
+Wallet ID
+
+</span>
+
+<strong
+id="walletID">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="balanceButtons">
+
+<button
+id="refreshWallet"
+class="refreshBtn">
+
+<i class="fas fa-rotate-right"></i>
+
+Refresh
+
+</button>
+
+<button
+class="depositBtn comingSoon">
+
+<i class="fas fa-plus-circle"></i>
+
+Deposit
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===========================
+ACCOUNT CARD
+=========================== -->
+
+<section class="accountCard">
+
+<div class="cardTitle">
+
+<h3>
+
+Virtual Account
+
+</h3>
+
+</div>
+
+<div class="accountItem">
+
+<label>
+
+Account Number
+
+</label>
+
+<div class="accountValue">
+
+<strong
+id="accountNumber">
+
+Loading...
+
+</strong>
+
+<button
+id="copyAccount">
+
+<i class="far fa-copy"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<div class="accountItem">
+
+<label>
+
+Account Name
+
+</label>
+
+<strong
+id="accountName">
+
+Loading...
+
+</strong>
+
+</div>
+
+<div class="accountItem">
+
+<label>
+
+Bank
+
+</label>
+
+<strong
+id="bankName">
+
+Loading...
+
+</strong>
+
+</div>
+
+</section>
+<!-- ===========================
+QUICK ACTIONS
+=========================== -->
+
+<section class="quickActions">
+
+<div class="sectionHeader">
+
+<h3>Quick Actions</h3>
+
+</div>
+
+<div class="actionGrid">
+
+<button class="actionCard comingSoon">
+
+<div class="actionIcon deposit">
+
+<i class="fas fa-plus"></i>
+
+</div>
+
+<span>Deposit</span>
+
+</button>
+
+<button class="actionCard comingSoon">
+
+<div class="actionIcon transfer">
+
+<i class="fas fa-paper-plane"></i>
+
+</div>
+
+<span>Transfer</span>
+
+</button>
+
+<button id="withdrawBtn" class="actionCard">
+
+    <div class="actionIcon withdraw">
+        <i class="fas fa-money-bill-wave"></i>
+    </div>
+
+    <span>Withdraw</span>
+
+</button>
+
+<button class="actionCard comingSoon">
+
+<div class="actionIcon history">
+
+<i class="fas fa-clock-rotate-left"></i>
+
+</div>
+
+<span>History</span>
+
+</button>
+
+<button class="actionCard comingSoon">
+
+<div class="actionIcon card">
+
+<i class="far fa-credit-card"></i>
+
+</div>
+
+<span>Cards</span>
+
+</button>
+
+<button class="actionCard comingSoon">
+
+<div class="actionIcon airtime">
+
+<i class="fas fa-mobile-screen"></i>
+
+</div>
+
+<span>Airtime</span>
+
+</button>
+
+<button class="actionCard comingSoon">
+
+<div class="actionIcon data">
+
+<i class="fas fa-wifi"></i>
+
+</div>
+
+<span>Data</span>
+
+</button>
+
+<button class="actionCard comingSoon">
+
+<div class="actionIcon bills">
+
+<i class="fas fa-file-invoice-dollar"></i>
+
+</div>
+
+<span>Bills</span>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===========================
+RECENT TRANSACTIONS
+=========================== -->
+
+<section class="transactionCard">
+
+<div class="sectionHeader">
+
+<h3>
+
+Recent Transactions
+
+</h3>
+
+<a href="#"
+class="comingSoon">
+
+View All
+
+</a>
+
+</div>
+
+<div
+id="transactionList"
+class="transactionList">
+
+<div class="emptyTransaction">
+
+<i class="fas fa-receipt"></i>
+
+<p>
+
+No transactions yet.
+
+</p>
+
+<small>
+
+Your recent wallet activities will appear here.
+
+</small>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PROMOTION CARD
+=========================== -->
+
+<section class="promoCard">
+
+<div class="promoContent">
+
+<h3>
+
+Secure Wallet
+
+</h3>
+
+<p>
+
+Enjoy instant transfers, secure payments and
+24/7 access to your wallet.
+
+</p>
+
+<button class="comingSoon">
+
+Learn More
+
+</button>
+
+</div>
+
+<div class="promoIcon">
+
+<i class="fas fa-shield-halved"></i>
+
+</div>
+
+</section>
+<!-- ===========================
+NOTIFICATION MODAL
+=========================== -->
+
+<div
+id="notificationModal"
+class="modal">
+
+<div class="modalContent">
+
+<div class="modalHeader">
+
+<h3>
+
+Notifications
+
+</h3>
+
+<button
+id="closeNotification">
+
+<i class="fas fa-times"></i>
+
+</button>
+
+</div>
+
+<div class="modalBody">
+
+<div class="emptyNotification">
+
+<i class="far fa-bell-slash"></i>
+
+<p>
+
+No notifications yet.
+
+</p>
+
+<small>
+
+Your wallet notifications will appear here.
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===========================
+TOAST MESSAGE
+=========================== -->
+
+<div
+id="toast"
+class="toast">
+
+<i class="fas fa-circle-check"></i>
+
+<span
+id="toastMessage">
+
+Done Successfully
+
+</span>
+
+</div>
+
+</main>
+
+<!-- ===========================
+BOTTOM NAVIGATION
+=========================== -->
+
+<nav class="bottomNav">
+
+<a
+href="dashboard.html"
+class="active">
+
+<i class="fas fa-house"></i>
+
+<span>
+
+Home
+
+</span>
+
+</a>
+
+<a
+href="#"
+class="comingSoon">
+
+<i class="fas fa-arrow-right-arrow-left"></i>
+
+<span>
+
+Transfer
+
+</span>
+
+</a>
+
+<a
+href="#"
+class="comingSoon">
+
+<i class="fas fa-clock-rotate-left"></i>
+
+<span>
+
+History
+
+</span>
+
+</a>
+
+<a
+href="#"
+class="comingSoon">
+
+<i class="fas fa-user"></i>
+
+<span>
+
+Profile
+
+</span>
+
+</a>
+
+</nav>
+
+<!-- ===========================
+JAVASCRIPT
+=========================== -->
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
